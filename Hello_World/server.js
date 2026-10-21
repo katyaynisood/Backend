@@ -47,6 +47,7 @@
 const express=require('express')
 const app=express();//app is map of express
  const db=require('./db');
+require('dotenv').config();
 
  
 app.get('/',function(req,res){
@@ -77,6 +78,7 @@ const menuRoutes=require('./routes/menuRoutes');
 app.use('/person',personRoutes)
 app.use('/menu',menuRoutes);
 
-app.listen(3000,()=>{
+const PORT=process.env.PORT || 3000;
+app.listen(PORT,()=>{
     console.log("listening to server")
 });

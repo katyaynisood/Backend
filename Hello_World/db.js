@@ -1,7 +1,8 @@
 //import mongodb
 const mongoose=require('mongoose');
-const mongoURL='mongodb://localhost:27017/mydata';
-
+//const mongoURL='mongodb://localhost:27017/mydata';
+//this url is taken from mongodb atlas used when we want to save database online
+const mongoURL=process.env.DB_URL;
 //setup mongoDB connection
 mongoose.connect(mongoURL)
 
