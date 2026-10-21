@@ -43,11 +43,11 @@
 
 
 
-
+require('dotenv').config();
 const express=require('express')
 const app=express();//app is map of express
  const db=require('./db');
-require('dotenv').config();
+
 
  
 app.get('/',function(req,res){
